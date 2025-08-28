@@ -21,5 +21,5 @@ if [ -z "${RUMBLE_HOME}" ]; then
   export RUMBLE_HOME="$(cd "$(dirname "$0")"/..; pwd)"
 fi
 
-export JAVA_HOME=$(/usr/libexec/java_home -v11)
+export JAVA_HOME=$(/usr/libexec/java_home -v17)
 exec "${SPARK_HOME_BIN}"/spark-submit "${RUMBLE_HOME}"/jars/rumbledb.jar "$@"
